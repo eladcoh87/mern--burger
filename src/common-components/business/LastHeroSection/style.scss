@@ -1,0 +1,64 @@
+.last-hero-container {
+	margin-top: 70px;
+
+	background: url('https://cdn4.vectorstock.com/i/1000x1000/99/03/seamless-pattern-with-sketched-burger-vector-5879903.jpg');
+	background-repeat: no-repeat;
+	object-fit: contain;
+	object-position: center;
+	background-size: 100% 200%;
+
+	color: white;
+	padding: 50px 40px;
+	text-align: center;
+
+	.centered {
+		margin: auto 0;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.info-box {
+			p:nth-child(1) {
+				color: #ffc222;
+				font-family: 'Miniver', cursive;
+
+				font-size: 60px;
+			}
+			p:nth-child(2) {
+				color: black;
+				font-family: 'Caprasimo', cursive;
+
+				font-size: 40px;
+			}
+
+			p:nth-child(3) {
+				margin-top: 20px;
+				margin-bottom: 20px;
+				color: black;
+				font-family: 'Roboto', sans-serif;
+
+				font-size: 15px;
+			}
+			.MuiButton-root {
+				background-color: #ffc222;
+				color: black;
+				font-weight: bold;
+				padding: 15px 20px;
+				border-radius: 10px;
+
+				&:hover {
+					color: white;
+				}
+			}
+		}
+
+		.img-wraper {
+			flex-basis: 20%;
+			img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+}

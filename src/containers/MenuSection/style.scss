@@ -1,0 +1,45 @@
+.menu-section-container {
+	.headline-wraper {
+		text-align: center;
+
+		h2 {
+			font-size: 30px;
+			font-weight: bold;
+			font-family: 'Caprasimo', cursive;
+			letter-spacing: 3px;
+		}
+	}
+
+	.btns-wraper {
+		padding: 50px 0px;
+		.btns-center {
+			margin: 0 auto;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 100px;
+			.food-btn {
+				padding: 15px 25px;
+				width: 150px;
+				border-radius: 20px;
+				color: black;
+				border-color: rgba(128, 128, 128, 0.267);
+
+				&:hover {
+					background-color: #ffc222;
+				}
+			}
+			.btn-change-color {
+				background-color: #ffc222;
+			}
+		}
+	}
+	.menu-cards-conatiner {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 25px;
+	}
+}

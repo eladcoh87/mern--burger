@@ -1,0 +1,108 @@
+.nav-links-container {
+	background-color: rgb(0, 0, 0);
+	padding: 36px 0px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	.nav-links-wraper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.logo-wraper {
+			font-family: 'Caprasimo', cursive;
+			font-size: 30px;
+			color: white;
+
+			span {
+				color: green;
+			}
+		}
+		.links-wraper {
+			display: flex;
+			list-style-type: none;
+			color: white;
+			gap: 30px;
+
+			li {
+				display: flex;
+				align-items: center;
+				transition: 0.5s;
+				font-size: 14px;
+
+				&:hover {
+					cursor: pointer;
+					color: #ffc222;
+				}
+			}
+		}
+
+		.contact-wraper {
+			font-size: 13px;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 400;
+			color: #1faa56;
+
+			span {
+				color: white;
+			}
+
+			.phone {
+				font-size: 26px;
+				color: #ffc222;
+				font-family: 'Caprasimo', cursive;
+			}
+		}
+
+		.actions-btn-wraper {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+
+			svg {
+				color: white;
+			}
+
+			.icon-wraper {
+				border: 1px solid white;
+				border-radius: 50%;
+				padding: 3px;
+				position: relative;
+				transition: 0.3s;
+
+				.icon-menu {
+					display: none;
+					height: 200px;
+					width: 250px;
+					background-color: white;
+					position: absolute;
+					transition: 0.3s;
+				}
+				&:hover {
+					transition: 0.3s;
+					background-color: #ffc222;
+				}
+			}
+			.icon-wraper:hover .icon-menu {
+				display: block;
+				z-index: 100;
+			}
+
+			.css-106c1u2-MuiBadge-badge {
+				background-color: #ffc222;
+				color: black;
+			}
+
+			.btn-ordernow {
+				background-color: #ffc222;
+				color: black;
+				font-family: 'Caprasimo', cursive;
+				transition: 0.3s;
+				padding: 14px 20px;
+				border-radius: 13px;
+
+				&:hover {
+					color: white;
+				}
+			}
+		}
+	}
+}

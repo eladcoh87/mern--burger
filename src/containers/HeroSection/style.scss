@@ -1,0 +1,174 @@
+.hero-section-container {
+	.hero-image-wraper {
+		height: 700px;
+		img {
+			width: 100%;
+			object-fit: cover;
+
+			height: 100%;
+		}
+	}
+
+	.order-wraper {
+		position: relative;
+		height: 500px;
+
+		.order-images-wraper {
+			position: absolute;
+			top: 190px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			width: 100%;
+			height: 500px;
+			z-index: 10;
+
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+			.first-image {
+				flex-basis: 38%;
+				align-self: stretch;
+				position: relative;
+				text-align: center;
+				color: white;
+			}
+
+			.dabel-image-wraper {
+				display: flex;
+				flex-direction: column;
+				align-self: stretch;
+
+				flex-basis: 33%;
+				gap: 30px;
+				.image-wraper {
+					height: 47%;
+					position: relative;
+					text-align: center;
+					color: white;
+					.top-left-div-image-main-section {
+						gap: 10px;
+						.type {
+							font-size: 35px;
+						}
+					}
+				}
+			}
+
+			.last-image {
+				flex-basis: 25%;
+				align-self: stretch;
+				position: relative;
+				text-align: center;
+				color: white;
+				.action-btn {
+					background-color: white;
+
+					&:hover {
+						background-color: #ffc222;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+
+	.info-box-container {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 100px;
+	}
+
+	.last-hero-image-wraper {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		width: 100%;
+		height: 750px;
+		position: relative;
+		.top-left-div-image-main-section {
+			position: absolute;
+			top: 130px;
+
+			left: 70%;
+			color: white;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.top-left-div-image-main-section {
+	position: absolute;
+	top: 8px;
+	left: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+	padding: 20px;
+
+	.headline {
+		font-family: 'Miniver', cursive;
+		font-size: 40px;
+	}
+
+	.type {
+		color: #ffc222;
+		font-family: 'Caprasimo', cursive;
+		font-size: 65px;
+	}
+	.action-btn {
+		background-color: #ffc222;
+		color: black;
+		font-family: 'Caprasimo', cursive;
+		transition: 0.3s;
+		padding: 14px 20px;
+		border-radius: 13px;
+
+		&:hover {
+			color: white;
+			background-color: #ffc222;
+		}
+	}
+}
+
+.hero-section-info-box-wraper {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	border: 3.5px dashed rgba(202, 196, 196, 0.575);
+	padding: 10px 25px;
+
+	svg {
+		font-size: 74px;
+		color: #ffc222;
+	}
+	.headline {
+		font-family: 'Roboto', sans-serif;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+	.message {
+		font-size: 13px;
+		color: rgb(202, 196, 196);
+	}
+
+	&:hover {
+		border-color: #ffc222;
+	}
+}
+
+.pupularFood-container.MuiContainer-root {
+	padding-top: 20px;
+	padding-bottom: 30px;
+	background: url('https://img.freepik.com/premium-vector/fast-food-decorative-seamless-pattern_202271-115.jpg?w=740');
+	display: flex;
+	justify-content: space-between;
+}

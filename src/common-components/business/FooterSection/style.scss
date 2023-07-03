@@ -1,0 +1,105 @@
+.footer-section-container {
+	background-color: #181818;
+
+	.logo-box {
+		padding-top: 120px;
+		padding-bottom: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		p {
+			color: #00a149;
+			font-family: 'Caprasimo', cursive;
+			font-size: 56px;
+			padding: 0px 30px;
+		}
+	}
+	.hr-line {
+		border-top: 1px solid rgba(128, 128, 128, 0.466);
+		margin: 0;
+		flex-grow: 1;
+	}
+
+	.info-box {
+		color: white;
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 100px;
+
+		h3 {
+			font-family: 'Caprasimo', cursive;
+			margin-bottom: 18px;
+			font-size: 17px;
+		}
+
+		p {
+			font-family: 'Roboto', sans-serif;
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+		.phone {
+			font-family: 'Caprasimo', cursive;
+			font-size: 20px;
+			color: #ffc222;
+		}
+	}
+
+	.info-col {
+		.info-col-email-wraper {
+			display: flex;
+			align-items: center;
+
+			.MuiFilledInput-input {
+				background-color: #1e1d23;
+			}
+
+			.MuiInputLabel-root {
+				color: white;
+			}
+			.MuiButton-root {
+				background-color: #ffc222;
+				color: #181818;
+				&:hover {
+					color: white;
+				}
+			}
+		}
+	}
+
+	.visa-box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 33px 250px;
+		background-color: #00a149;
+		position: relative;
+		text-align: center;
+		color: white;
+
+		p {
+			color: white;
+			font-family: 'Roboto', sans-serif;
+			font-size: 13px;
+		}
+		img {
+			height: 34px;
+		}
+
+		.sociel-centered {
+			position: absolute;
+			top: 2%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			.MuiIconButton-root {
+				background-color: ghostwhite;
+				padding: 10px;
+				margin-right: 10px;
+                &:hover {
+                    background-color: #ffc222;
+                }
+			}
+		}
+	}
+}

@@ -1,0 +1,68 @@
+.menu-card-container {
+	flex-basis: 45%;
+	border: 1px solid gainsboro;
+	padding: 10px;
+	border-radius: 20px;
+	.menu-card-wraper {
+		
+		border-radius: 20px;
+		display: flex;
+		gap: 10px;
+		padding: 30px 10px;
+		background-color: #fff9e8;
+		.menu-card-img-wraper {
+			img {
+				height: 120px;
+			}
+		}
+
+		.menu-card-desc-wraper {
+			display: flex;
+			flex-grow: 1;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 10px;
+			h3 {
+				font-size: 18px;
+				font-family: 'Caprasimo', cursive;
+
+				&:hover {
+					color: #ffc222;
+				}
+			}
+
+			p {
+				color: gray;
+				font-size: 12px;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			.menu-card-price-wraper {
+				width: 100%;
+				display: flex;
+				
+				align-items: center;
+				justify-content: space-between;
+
+				p {
+					color: #ffc222;
+					font-size: 20px;
+					font-family: 'Miniver', cursive;
+
+
+				}
+				.MuiIconButton-root {
+					background-color: #ffc222;
+					color: black;
+					transition: all 0.5s;
+
+					&:hover {
+						color: white;
+					}
+				}
+			}
+		}
+
+		
+	}
+}

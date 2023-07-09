@@ -170,5 +170,7 @@
 	padding-bottom: 30px;
 	background: url('https://img.freepik.com/premium-vector/fast-food-decorative-seamless-pattern_202271-115.jpg?w=740');
 	display: flex;
-	justify-content: space-between;
+	gap: 60px;
+	justify-content: flex-start;
+	flex-wrap: wrap;
 }

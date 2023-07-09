@@ -8,12 +8,29 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import IconButton from '@mui/material/IconButton';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PinterestIcon from '@mui/icons-material/Pinterest';
-
+// eslint-disable-next-line import/extensions
+import CitysComp from './Citys';
 import visa from './visa.png';
 
 import './style.scss';
 
 export type Props = {};
+
+/*
+
+const countrys = {
+	"Israel": "Tel-Aviv",
+	"Germany": "Berlin",
+	"France": "Paris"
+};
+
+*/
+
+const countrys = [
+	{ country: 'Israel', capital: 'Tel Aviv' },
+	{ country: 'Germany', capital: 'Berlin' },
+	{ country: 'France', capital: 'Paris' },
+];
 
 const footerSection: React.FC<Props & LocalizeContextProps> = (props: Props & LocalizeContextProps) => {
 	return (
@@ -69,6 +86,9 @@ const footerSection: React.FC<Props & LocalizeContextProps> = (props: Props & Lo
 						<PinterestIcon />
 					</IconButton>
 				</div>
+			</div>
+			<div className="citys-box">
+				<CitysComp countrys={countrys} />
 			</div>
 		</div>
 	);

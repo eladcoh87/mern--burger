@@ -9,14 +9,21 @@ import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
 import LunchDiningIcon from '@mui/icons-material/LunchDining';
 import './style.scss';
 import FoodCard from 'common-components/business/FoodCard';
+import { BurgerActions, burgerSelector } from 'actions/burger';
+import { AddToCartProductFunction, BurgerProduct } from 'actions/burger/interface';
+import { Dispatch } from 'redux';
 // import { HeroSectionActions, heroSectionSelector } from 'actions/redux/heroSection';
 
 export type Props = {};
 
-export interface OwnProps extends Props, LocalizeContextProps {}
+export interface OwnProps extends Props, LocalizeContextProps {
+	initProducts: BurgerProduct[];
+	addToCartProduct: typeof AddToCartProductFunction;
+}
 
 export class HeroSection extends React.Component<OwnProps> {
 	render() {
+		const { initProducts, addToCartProduct } = this.props;
 		return (
 			<div className="hero-section-container">
 				<div className="hero-image-wraper">
@@ -112,10 +119,13 @@ export class HeroSection extends React.Component<OwnProps> {
 				</Container>
 
 				<Container className="pupularFood-container" maxWidth="xl">
-					<FoodCard />
-					<FoodCard />
-					<FoodCard />
-					<FoodCard />
+					{initProducts.map((product) => (
+						<FoodCard
+							key={product.id}
+							product={product}
+							addToCartProduct={(productFood: BurgerProduct) => addToCartProduct(productFood)}
+						/>
+					))}
 				</Container>
 				<div className="last-hero-image-wraper">
 					<img
@@ -137,8 +147,10 @@ export class HeroSection extends React.Component<OwnProps> {
 
 export default baseConnect<any, any, Props>(
 	HeroSection,
-	(state: ApplicationState) => {
-		return {};
-	},
-	{}
+	(state: ApplicationState) => ({
+		initProducts: burgerSelector.initProducts(state),
+	}),
+	(dispatch: Dispatch) => ({
+		addToCartProduct: (product: BurgerProduct) => dispatch(BurgerActions.addToCartProduct(product)),
+	})
 );

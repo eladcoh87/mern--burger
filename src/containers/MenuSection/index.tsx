@@ -5,6 +5,8 @@ import { ApplicationState } from 'actions';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuCard from 'common-components/business/MenuCard';
+import { burgerSelector } from 'actions/burger';
+import { BurgerProduct } from 'actions/burger/interface';
 
 import './style.scss';
 // import { MenuSectionActions, menuSectionSelector } from 'actions/redux/menuSection';
@@ -15,7 +17,9 @@ interface State {
 	foodNameState: string;
 }
 
-export interface OwnProps extends Props, LocalizeContextProps {}
+export interface OwnProps extends Props, LocalizeContextProps {
+	initProducts: BurgerProduct[];
+}
 
 export class MenuSection extends React.Component<OwnProps, State> {
 	constructor(props: OwnProps) {
@@ -25,11 +29,12 @@ export class MenuSection extends React.Component<OwnProps, State> {
 		};
 	}
 	menuColorBtn(event: React.MouseEvent<HTMLButtonElement>, foodName: string) {
-		console.log(event.target);
 		this.setState({ foodNameState: foodName });
 	}
 	render() {
 		const { foodNameState } = this.state;
+		const { initProducts } = this.props;
+
 		return (
 			<Container className="menu-section-container" maxWidth="xl">
 				<div className="headline-wraper">
@@ -62,12 +67,9 @@ export class MenuSection extends React.Component<OwnProps, State> {
 				</div>
 
 				<div className="menu-cards-conatiner">
-					<MenuCard />
-					<MenuCard />
-					<MenuCard />
-					<MenuCard />
-					<MenuCard />
-					<MenuCard />
+					{initProducts.map((product) => (
+						<MenuCard key={product.id} product={product} />
+					))}
 				</div>
 			</Container>
 		);
@@ -76,8 +78,8 @@ export class MenuSection extends React.Component<OwnProps, State> {
 
 export default baseConnect<any, any, Props>(
 	MenuSection,
-	(state: ApplicationState) => {
-		return {};
-	},
+	(state: ApplicationState) => ({
+		initProducts: burgerSelector.initProducts(state),
+	}),
 	{}
 );

@@ -28,7 +28,7 @@ const customerRecomended: React.FC<Props & LocalizeContextProps> = (props: Props
 							<Rating size="small" name="read-only" value={2} readOnly />
 						</div>
 					</div>
-					<div className="recomended-last-row">"forgat the trendy pizza,eat all the burger"</div>
+					<div className="recomended-last-row">forgat the trendy pizza,eat all the burger</div>
 				</div>
 				<div className="recomended-wraper">
 					<div className="recomended-first-row">

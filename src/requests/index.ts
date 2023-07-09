@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 /**
  * Here you add all the apis urls defenition
  */
@@ -8,14 +9,21 @@ import { config } from 'config';
 
 export interface Api {
 	getDevices: () => Promise<AxiosResponse>;
+	getInitProductsFunc: () => Promise<AxiosResponse>;
 }
 
 export const createApi = (baseURL = config.ROOT_SERVER_URL): Api => ({
-	getDevices: () => request.call({
-		baseURL: 'http://6ew7g.mocklab.io/' || baseURL,
-		method: 'get',
-		url: '/getlatestWithCustomResponseCode'
-	})
+	getDevices: () =>
+		request.call({
+			baseURL: 'http://6ew7g.mocklab.io/' || baseURL,
+			method: 'get',
+			url: '/getlatestWithCustomResponseCode',
+		}),
+	getInitProductsFunc: () =>
+		request.call({
+			baseURL: 'http://localhost:5000/api/products/allproducts' || baseURL,
+			method: 'get',
+		}),
 });
 
 export default createApi();

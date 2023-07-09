@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import * as React from 'react';
 import { withLocalize, LocalizeContextProps } from 'react-localize-redux';
 import Container from '@mui/material/Container';
@@ -9,10 +10,16 @@ import Badge from '@mui/material/Badge';
 
 import './style.scss';
 import MenuLinks from '../MenuLinks';
+import { BurgerProduct } from 'actions/burger/interface';
+import MenuCartItem from '../MenuCartItem';
 
-export type Props = {};
+export type Props = {
+	cart: BurgerProduct[];
+	removeFromCartProduct: (productId: string) => void;
+};
 
 const navLinks: React.FC<Props & LocalizeContextProps> = (props: Props & LocalizeContextProps) => {
+	const { cart, removeFromCartProduct } = props;
 	return (
 		<nav className="nav-links-container">
 			<Container className="nav-links-wraper" maxWidth="xl">
@@ -47,14 +54,44 @@ const navLinks: React.FC<Props & LocalizeContextProps> = (props: Props & Localiz
 					</div>
 					<div className="icon-wraper">
 						<IconButton aria-label="person">
-							<Badge badgeContent={4} color="primary">
+							<Badge badgeContent={cart.length} color="primary">
 								<ShoppingCartIcon />
 							</Badge>
 						</IconButton>
-						<div className="icon-menu">123</div>
+						<div className="icon-menu cart-menu">
+							{cart.length > 0 && (
+								<div className="menu-cart-item-wraper">
+									{cart.map((productItam) => (
+										<MenuCartItem
+											removeFromCartProduct={removeFromCartProduct}
+											product={productItam}
+											key={productItam.id}
+										/>
+									))}
+								</div>
+							)}
+							<div className="spend-price-wraper">
+								<p>Spend $1,000.00 for FREE SHIPPING</p>
+							</div>
+							<div className="subtotal-wraper">
+								<p>Subtotal: $0.00</p>
+							</div>
+							<div>
+								<Button className="btn-cart" variant="contained">
+									go to cart
+								</Button>
+							</div>
+							<div>
+								<Button disabled className="btn-checkout" variant="contained">
+									go to checkout
+								</Button>
+							</div>
+						</div>
 					</div>
 
-					<Button className="btn-ordernow" variant="contained">order now</Button>
+					<Button className="btn-ordernow" variant="contained">
+						order now
+					</Button>
 				</div>
 			</Container>
 		</nav>

@@ -70,8 +70,8 @@
 
 				.icon-menu {
 					display: none;
-					height: 200px;
-					width: 250px;
+
+					width: 300px;
 					background-color: white;
 					position: absolute;
 					transition: 0.3s;
@@ -79,6 +79,46 @@
 				&:hover {
 					transition: 0.3s;
 					background-color: #ffc222;
+				}
+
+				.cart-menu {
+					padding: 10px;
+					text-align: center;
+					.menu-cart-item-wraper{
+					
+						min-height: 100px;
+						margin-bottom: 10px;
+					}
+					.spend-price-wraper {
+						background-color: rgba(128, 128, 128, 0.705);
+						text-align: center;
+						padding: 5px;
+						border-radius: 5px;
+
+						p {
+							font-size: 15px;
+							color: white;
+						}
+					}
+
+					.subtotal-wraper {
+						text-align: center;
+						padding: 20px 0px;
+					}
+					
+					.btn-cart {
+						width: 100%;
+						background-color: black;
+						margin-bottom: 12px;
+
+						&:hover {
+							background-color: #ffc222;
+						}
+					}
+
+					.btn-checkout {
+						width: 100%;
+					}
 				}
 			}
 			.icon-wraper:hover .icon-menu {

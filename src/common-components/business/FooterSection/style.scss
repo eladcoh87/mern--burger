@@ -96,10 +96,27 @@
 				background-color: ghostwhite;
 				padding: 10px;
 				margin-right: 10px;
-                &:hover {
-                    background-color: #ffc222;
-                }
+				&:hover {
+					background-color: #ffc222;
+				}
 			}
+		}
+	}
+
+	.citys-box {
+		padding: 50px;
+		background-color: aliceblue;
+
+		.pressedBtn {
+			background-color: blue;
+		}
+
+		.notmetchCity {
+			background-color: red;
+		}
+
+		.noPressed{
+			background-color: none;
 		}
 	}
 }

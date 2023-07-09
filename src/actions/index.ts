@@ -8,8 +8,10 @@ import { CartState } from 'actions/cart/interface';
 
 /* ------------- Import Sagas ------------- */
 import { catalogSaga } from 'actions/catalog';
+import { burgerSaga } from 'actions/burger';
 import { flowManagerSaga } from 'actions/flowManager';
 import makeCart from '@base/features/base-cart';
+import { BurgerState } from './burger/interface';
 
 const baseCartReducer = makeCart('cart').reducer;
 
@@ -17,6 +19,7 @@ const baseCartReducer = makeCart('cart').reducer;
 export interface ApplicationState extends BaseApplicationState {
 	cart: CartState;
 	catalog: CatalogState;
+	burger: BurgerState;
 }
 
 /* ------------- Export Reducers ------------- */
@@ -24,7 +27,8 @@ export const rootReducer: Reducer<ApplicationState> = combineReducers<Applicatio
 	...baseReducers,
 
 	cart: require('./cart').reducer(baseCartReducer),
-	catalog: require('./catalog').reducer
+	catalog: require('./catalog').reducer,
+	burger: require('./burger').reducer,
 });
 
 /* ------------- Export Sagas ------------- */
@@ -32,4 +36,5 @@ export const rootSaga = function* () {
 	yield all([fork(flowManagerSaga)]);
 	yield all([fork(require('./cart').cartSaga)]);
 	yield all([fork(catalogSaga)]);
+	yield all([fork(burgerSaga)]);
 };

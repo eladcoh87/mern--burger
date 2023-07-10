@@ -1,6 +1,6 @@
 
 ## Description 📚
- MERN ECOMMERCE -  burger website built with the MERN stack. This app uses harmony boilerplate.
+ MERN burger  -   website built with the MERN stack. This app uses harmony boilerplate.
  
  
 ## Installation 💡 

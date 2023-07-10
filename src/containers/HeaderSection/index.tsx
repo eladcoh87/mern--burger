@@ -15,15 +15,22 @@ export type Props = {};
 
 export interface OwnProps extends Props, LocalizeContextProps {
 	cart: BurgerProduct[];
+	totalCartProducts: number;
+	totalCartValue: number;
 	removeFromCartProduct: typeof RemoveFromCartProductFunction;
 }
 
 export class HeaderSection extends React.Component<OwnProps> {
 	render() {
-		const { cart, removeFromCartProduct } = this.props;
+		const { cart, removeFromCartProduct, totalCartProducts, totalCartValue } = this.props;
 		return (
 			<div className="header-container">
-				<NavLinks removeFromCartProduct={(productId) => removeFromCartProduct(productId)} cart={cart} />
+				<NavLinks
+					totalCartProducts={totalCartProducts}
+					removeFromCartProduct={(productId) => removeFromCartProduct(productId)}
+					cart={cart}
+					totalCartValue={totalCartValue}
+				/>
 				<FoodStripIcons />
 			</div>
 		);
@@ -34,6 +41,8 @@ export default baseConnect<any, any, Props>(
 	HeaderSection,
 	(state: ApplicationState) => ({
 		cart: burgerSelector.cart(state),
+		totalCartProducts: burgerSelector.totalCartProducts(state),
+		totalCartValue: burgerSelector.totalCartValue(state),
 	}),
 	(dispatch: Dispatch) => ({
 		removeFromCartProduct: (productId: string) => dispatch(BurgerActions.removeFromCartProduct(productId)),

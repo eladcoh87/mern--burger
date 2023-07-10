@@ -14,6 +14,8 @@ export interface BurgerProduct {
 export interface BurgerState {
 	initProducts: BurgerProduct[];
 	cart: BurgerProduct[];
+	totalCartValue: number;
+	totalCartProducts: number;
 }
 
 export enum TypesNames {

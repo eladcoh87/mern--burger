@@ -12,14 +12,17 @@ import './style.scss';
 import MenuLinks from '../MenuLinks';
 import { BurgerProduct } from 'actions/burger/interface';
 import MenuCartItem from '../MenuCartItem';
+import { history } from '@base/features';
 
 export type Props = {
 	cart: BurgerProduct[];
 	removeFromCartProduct: (productId: string) => void;
+	totalCartProducts: number;
+	totalCartValue: number;
 };
 
 const navLinks: React.FC<Props & LocalizeContextProps> = (props: Props & LocalizeContextProps) => {
-	const { cart, removeFromCartProduct } = props;
+	const { cart, removeFromCartProduct, totalCartProducts, totalCartValue } = props;
 	return (
 		<nav className="nav-links-container">
 			<Container className="nav-links-wraper" maxWidth="xl">
@@ -54,7 +57,7 @@ const navLinks: React.FC<Props & LocalizeContextProps> = (props: Props & Localiz
 					</div>
 					<div className="icon-wraper">
 						<IconButton aria-label="person">
-							<Badge badgeContent={cart.length} color="primary">
+							<Badge badgeContent={totalCartProducts} color="primary">
 								<ShoppingCartIcon />
 							</Badge>
 						</IconButton>
@@ -71,13 +74,17 @@ const navLinks: React.FC<Props & LocalizeContextProps> = (props: Props & Localiz
 								</div>
 							)}
 							<div className="spend-price-wraper">
-								<p>Spend $1,000.00 for FREE SHIPPING</p>
+								<p>Spend ${(1000 - totalCartValue).toFixed(2)} for FREE SHIPPING</p>
 							</div>
 							<div className="subtotal-wraper">
-								<p>Subtotal: $0.00</p>
+								<p>Subtotal: ${totalCartValue.toFixed(2)}</p>
 							</div>
 							<div>
-								<Button className="btn-cart" variant="contained">
+								<Button
+									onClick={() => history.push('/cart-page')}
+									className="btn-cart"
+									variant="contained"
+								>
 									go to cart
 								</Button>
 							</div>

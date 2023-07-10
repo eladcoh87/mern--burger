@@ -12,6 +12,7 @@ import FormExample from 'pages/FormExample';
 /* -------------- Routes Paths --------------- */
 import RoutesPath from './RoutesPath';
 import HomePage from 'pages/HomePage';
+import CartPage from 'pages/CartPage';
 
 const { stepTypes } = FlowManagerConfig;
 
@@ -33,6 +34,8 @@ export default (
 				component={() => <h1>Checkout for Xiaomi</h1>}
 			/>
 			<Route exact path={RoutesPath.ERROR_PAGE} component={() => <ErrorPage />} />
+			<Route path={RoutesPath.CART_PAGE} component={CartPage} />
+
 			<Route path={RoutesPath.ROOT} step={stepTypes.DEVICE_GALLERY.name} component={HomePage} />
 		</Switch>
 	</App>

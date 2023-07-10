@@ -1,0 +1,134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Caprasimo&family=Miniver&family=Roboto:wght@300;400&display=swap');
+.cart-page-container {
+	min-height: 50vh;
+    font-family: 'Abel', sans-serif;
+
+    padding-bottom: 80px;
+	.line {
+		border-top: 1px solid rgba(128, 128, 128, 0.397);
+	}
+	.cart-empty-wraper {
+		text-align: center;
+		margin-top: 100px;
+		p {
+			color: black;
+			font-family: 'Caprasimo', cursive;
+			font-size: 35px;
+			margin-bottom: 50px;
+		}
+		.MuiButton-root {
+			padding: 12px 80px;
+			background-color: black;
+			&:hover {
+				color: #ffc222;
+			}
+		}
+	}
+
+	.cart-full-wraper {
+		padding-top: 100px;
+		.headline {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-bottom: 60px;
+            font-size: 15px;
+
+            p:first-child {
+                font-family: 'Caprasimo', cursive;
+                font-size: 40px;
+
+            }
+		}
+
+		.type-headline-wraper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-bottom: 15px;
+
+			.price-quantity-total {
+				display: flex;
+				align-items: center;
+                justify-content: space-between;
+				flex-basis: 35%;
+			}
+		}
+	}
+
+	.product-list-wraper {
+       
+		.product-box {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+            margin-bottom: 40px;
+			.product-img-info-wraper {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+
+
+                .product-info-box{
+                    
+                    width: 170px;
+                }
+				img {
+					height: 70px;
+                    width: 80px;
+				}
+				.para-name {
+					margin-bottom: 10px;
+				}
+
+               
+			}
+		}
+
+        .product-price-qty-wraper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-basis: 35%;
+            .price-para{
+                width: 70px;
+            }
+            .product-qty-box{
+        
+               display: flex;
+               align-items: center;
+               gap: 10px;
+               
+
+               svg{
+                font-size: 17px;
+               }
+            }
+
+            .total-box{
+                width: 45px;
+            }
+        }
+	}
+
+    .subtotal-box{
+        text-align: right;
+        margin-top: 30px;
+
+        .subtotal-price{
+            margin-bottom: 20px;
+            font-family: 'Caprasimo', cursive;
+            letter-spacing: 3px;
+
+        }
+
+        .MuiButtonBase-root {
+            margin-top: 20px;
+            color: gray;
+            border: 1px solid black;
+            width: 360px;
+            padding: 10px 2px;
+        }
+    }
+}

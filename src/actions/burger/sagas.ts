@@ -15,6 +15,7 @@ export function* getInitProductsSaga(action: GetInitProductsSagaAction) {
 		newProdoctObject.id = newProdoctObject._id || 'genericid';
 		delete newProdoctObject._id;
 		newProdoctObject.qty = 0;
+		newProdoctObject.price = Number(newProdoctObject.price.toFixed(2));
 		return newProdoctObject;
 	});
 

@@ -30,6 +30,8 @@ export const BurgerActions = Creators;
 const INITIAL_STATE = createDraft<BurgerState>({
 	initProducts: [],
 	cart: [],
+	totalCartValue: 0,
+	totalCartProducts: 0,
 });
 
 /* ------------- Selectors ------------- */
@@ -37,6 +39,8 @@ const INITIAL_STATE = createDraft<BurgerState>({
 export const burgerSelector = {
 	initProducts: (state: ApplicationState) => state.burger?.initProducts,
 	cart: (state: ApplicationState) => state.burger?.cart,
+	totalCartValue: (state: ApplicationState) => state.burger?.totalCartValue,
+	totalCartProducts: (state: ApplicationState) => state.burger?.totalCartProducts,
 };
 
 /* ------------- Reducers ------------- */
@@ -57,12 +61,16 @@ const addToCartReducer = (draft: Draft<BurgerState>, action: AddToCartProductAct
 	} else {
 		draft.cart[productInCartIndex].qty += 1;
 	}
+	draft.totalCartValue += mutableObj.price;
+	draft.totalCartProducts += 1;
 };
 
 const removeFromCartReducer = (draft: Draft<BurgerState>, action: RemoveFromCartProductAction) => {
 	const { productId } = action;
 	const productInCartIndex = draft.cart.findIndex((productCart) => productCart.id === productId);
-	draft.cart.splice(productInCartIndex, 1);
+	const removedProduct = draft.cart.splice(productInCartIndex, 1);
+	draft.totalCartValue -= removedProduct[0].price * removedProduct[0].qty;
+	draft.totalCartProducts -= removedProduct[0].qty;
 };
 
 /* ------------- Hookup Reducers To Types ------------- */

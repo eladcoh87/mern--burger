@@ -24,10 +24,7 @@ class App extends React.Component<Props> {
 				{!!loading && <Spinner />}
 				<HeaderSection />
 				<Media greaterThan="sm">{children}</Media>
-				<Media at="sm">
-					<h5>This is Render Example for 0-768 screen size</h5>
-					{children}
-				</Media>
+				<Media at="sm">{children}</Media>
 				<FooterSection />
 			</>
 		);

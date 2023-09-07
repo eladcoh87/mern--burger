@@ -20,6 +20,9 @@
 				color: green;
 			}
 		}
+		.burger-icon-wraper {
+			display: none;
+		}
 		.links-wraper {
 			display: flex;
 			list-style-type: none;
@@ -160,6 +163,31 @@
 				border-radius: 13px;
 
 				&:hover {
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1328px) {
+	.nav-links-container {
+		.nav-links-wraper {
+			.links-wraper {
+				display: none;
+			}
+			.contact-wraper {
+				display: none;
+			}
+
+			.btn-ordernow {
+				display: none;
+			}
+			.burger-icon-wraper {
+				display: block;
+				width: 116px;
+
+				.MuiIconButton-root {
 					color: white;
 				}
 			}

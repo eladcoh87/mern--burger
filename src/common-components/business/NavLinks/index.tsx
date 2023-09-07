@@ -15,6 +15,7 @@ import { BurgerProduct } from 'actions/burger/interface';
 import MenuCartItem from '../MenuCartItem';
 import { history } from '@base/features';
 import { Link } from 'react-router-dom';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export type Props = {
 	cart: BurgerProduct[];
@@ -28,12 +29,18 @@ const navLinks: React.FC<Props & LocalizeContextProps> = (props: Props & Localiz
 	return (
 		<nav className="nav-links-container">
 			<Container className="nav-links-wraper" maxWidth="xl">
+				<div className="burger-icon-wraper">
+					<IconButton>
+						<MenuIcon />
+					</IconButton>
+				</div>
 				<div className="logo-wraper">
 					<Link to="/">
 						{' '}
 						<span>BURGER</span> HUB
 					</Link>
 				</div>
+
 				<ul className="links-wraper">
 					<li>
 						<MenuLinks name="Home" />

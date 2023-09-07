@@ -91,7 +91,7 @@ export class HeroSection extends React.Component<OwnProps> {
 								alt=""
 							/>
 							<div className="top-left-div-image-main-section">
-								<p className="headline">fastboy</p> <p className="type">hotdog</p>{' '}
+								<p className="headline">fastboy</p> <p className="type hotdogheadline">hotdog</p>{' '}
 								<p> &#8226; dubel suoce </p>{' '}
 								<Button className="action-btn" variant="contained">
 									order now

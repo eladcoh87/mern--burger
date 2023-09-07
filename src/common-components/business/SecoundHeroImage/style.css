@@ -65,4 +65,24 @@
 .secoundHeroImage-container .centered .desc-wraper .MuiButton-root:hover {
   background-color: ffc222;
   color: white;
+}
+
+@media (max-width: 1154px) {
+  .secoundHeroImage-container .centered .desc-wraper {
+    width: 200px;
+  }
+  .secoundHeroImage-container .centered .desc-wraper .long-para {
+    display: none;
+  }
+  .secoundHeroImage-container .centered .desc-wraper p:nth-child(2) {
+    font-size: 20px;
+    font-family: "Caprasimo", cursive;
+  }
+  .secoundHeroImage-container .centered .desc-wraper p:nth-child(3) {
+    font-size: 20px;
+    font-family: "Caprasimo", cursive;
+  }
+  .secoundHeroImage-container .centered .desc-wraper .MuiButton-root {
+    margin-left: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

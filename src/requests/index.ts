@@ -21,7 +21,7 @@ export const createApi = (baseURL = config.ROOT_SERVER_URL): Api => ({
 		}),
 	getInitProductsFunc: () =>
 		request.call({
-			baseURL: 'https://burger-express.vercel.app/api/products/allproducts' || baseURL,
+			baseURL: 'https://burger-express-git-main-eladcoh87.vercel.app/api/products/allproducts' || baseURL,
 			method: 'get',
 		}),
 });

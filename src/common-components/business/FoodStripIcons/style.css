@@ -26,4 +26,33 @@
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+@media (max-width: 1328px) {
+  .foodStripIcons-container .foodStripIcons-wraper .icon-wraper1 {
+    display: none;
+  }
+  .foodStripIcons-container .foodStripIcons-wraper .icon-wraper2 {
+    display: none;
+  }
+}
+@media (max-width: 970px) {
+  .foodStripIcons-container .foodStripIcons-wraper .icon-wraper3 {
+    display: none;
+  }
+  .foodStripIcons-container .foodStripIcons-wraper .icon-wraper4 {
+    display: none;
+  }
+}
+@media (max-width: 670px) {
+  .foodStripIcons-container .foodStripIcons-wraper {
+    justify-content: center;
+    gap: 100px;
+  }
+  .foodStripIcons-container .foodStripIcons-wraper .icon-wraper5 {
+    display: none;
+  }
+  .foodStripIcons-container .foodStripIcons-wraper .icon-wraper6 {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

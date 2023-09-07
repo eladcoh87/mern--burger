@@ -21,6 +21,9 @@
 .nav-links-container .nav-links-wraper .logo-wraper span {
   color: green;
 }
+.nav-links-container .nav-links-wraper .burger-icon-wraper {
+  display: none;
+}
 .nav-links-container .nav-links-wraper .links-wraper {
   display: flex;
   list-style-type: none;
@@ -144,4 +147,23 @@
 }
 .nav-links-container .nav-links-wraper .actions-btn-wraper .btn-ordernow:hover {
   color: white;
+}
+
+@media (max-width: 1328px) {
+  .nav-links-container .nav-links-wraper .links-wraper {
+    display: none;
+  }
+  .nav-links-container .nav-links-wraper .contact-wraper {
+    display: none;
+  }
+  .nav-links-container .nav-links-wraper .btn-ordernow {
+    display: none;
+  }
+  .nav-links-container .nav-links-wraper .burger-icon-wraper {
+    display: block;
+    width: 116px;
+  }
+  .nav-links-container .nav-links-wraper .burger-icon-wraper .MuiIconButton-root {
+    color: white;
+  }
 }/*# sourceMappingURL=style.css.map */

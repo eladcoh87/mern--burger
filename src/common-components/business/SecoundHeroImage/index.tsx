@@ -18,10 +18,11 @@ const secoundHeroImage: React.FC<Props & LocalizeContextProps> = (props: Props &
 					<p>About Our Food</p>
 					<p>From Texas With</p>
 					<p>American Love</p>
-					<p>
+					<p className="long-para">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint qui reprehenderit cumque eos vero
 						amet ex dignissimos corrupti consequuntur perspiciatis!,mos corrupti consequuntur perspiciatis!
 					</p>
+				
 					<Button variant="contained">order now</Button>
 				</div>
 			</div>

@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { history } from '@base/features';
 
 // import { HomePageActions, homePageSelector } from 'actions/redux/homePage';
 
@@ -88,7 +89,9 @@ export class CartPage extends React.Component<OwnProps> {
 						<div className="subtotal-box">
 							<p className="subtotal-price">Subtotal: ${cartSubtotal}</p>
 							<p>Taxes and shipping calculated at checkout</p>
-							<Button variant="outlined">checkout</Button>
+							<Button onClick={() => history.push('/checkout-page')} variant="outlined">
+								checkout
+							</Button>
 						</div>
 					</Container>
 				)}

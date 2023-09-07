@@ -11,6 +11,10 @@
 			font-family: 'Caprasimo', cursive;
 			font-size: 30px;
 			color: white;
+			a {
+				color: white;
+				text-decoration: none;
+			}
 
 			span {
 				color: green;
@@ -66,7 +70,7 @@
 				border-radius: 50%;
 				padding: 3px;
 				position: relative;
-				transition: 0.3s;
+				transition: all 0.3s;
 
 				.icon-menu {
 					display: none;
@@ -74,7 +78,23 @@
 					width: 300px;
 					background-color: white;
 					position: absolute;
-					transition: 0.3s;
+					transition: all 0.3s;
+				}
+				.user-menu {
+					width: 130px;
+					padding: 20px;
+					right: 7px;
+					a {
+						color: rgba(0, 0, 0, 0.733);
+						text-decoration: none;
+						display: block;
+						margin-bottom: 20px;
+						font-size: 13.5px;
+
+						&:hover {
+							color: black;
+						}
+					}
 				}
 				&:hover {
 					transition: 0.3s;
@@ -84,8 +104,7 @@
 				.cart-menu {
 					padding: 10px;
 					text-align: center;
-					.menu-cart-item-wraper{
-					
+					.menu-cart-item-wraper {
 						min-height: 100px;
 						margin-bottom: 10px;
 					}
@@ -105,7 +124,7 @@
 						text-align: center;
 						padding: 20px 0px;
 					}
-					
+
 					.btn-cart {
 						width: 100%;
 						background-color: black;
@@ -118,6 +137,7 @@
 
 					.btn-checkout {
 						width: 100%;
+						background-color: #ffc222;
 					}
 				}
 			}

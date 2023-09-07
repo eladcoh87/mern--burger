@@ -1,0 +1,30 @@
+.sign-in-container {
+	min-height: 50vh;
+	display: flex;
+	justify-content: center;
+
+	.center-box {
+		padding: 80px 0px;
+		width: 100%;
+		max-width: 500px;
+
+		h3 {
+			font-size: 35px;
+			font-family: 'Caprasimo', cursive;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		.field-box {
+			margin-bottom: 20px;
+		}
+		.btn-box {
+			text-align: center;
+			margin-top: 50px;
+			.MuiButton-root {
+				background-color: black;
+				padding: 15px 30px;
+			}
+		}
+	}
+}

@@ -13,6 +13,8 @@ import FormExample from 'pages/FormExample';
 import RoutesPath from './RoutesPath';
 import HomePage from 'pages/HomePage';
 import CartPage from 'pages/CartPage';
+import CheckOutPage from 'pages/CheckOutPage';
+import SignPage from 'pages/SignPage';
 
 const { stepTypes } = FlowManagerConfig;
 
@@ -35,6 +37,9 @@ export default (
 			/>
 			<Route exact path={RoutesPath.ERROR_PAGE} component={() => <ErrorPage />} />
 			<Route path={RoutesPath.CART_PAGE} component={CartPage} />
+			<Route path={RoutesPath.SIGN_PAGE} component={SignPage} />
+
+			<Route path={RoutesPath.CHECKOUT_PAGE} component={CheckOutPage} />
 
 			<Route path={RoutesPath.ROOT} step={stepTypes.DEVICE_GALLERY.name} component={HomePage} />
 		</Switch>

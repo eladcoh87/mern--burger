@@ -13,6 +13,7 @@ import MenuLinks from '../MenuLinks';
 import { BurgerProduct } from 'actions/burger/interface';
 import MenuCartItem from '../MenuCartItem';
 import { history } from '@base/features';
+import { Link } from 'react-router-dom';
 
 export type Props = {
 	cart: BurgerProduct[];
@@ -23,11 +24,15 @@ export type Props = {
 
 const navLinks: React.FC<Props & LocalizeContextProps> = (props: Props & LocalizeContextProps) => {
 	const { cart, removeFromCartProduct, totalCartProducts, totalCartValue } = props;
+	console.log(cart.length > 3);
 	return (
 		<nav className="nav-links-container">
 			<Container className="nav-links-wraper" maxWidth="xl">
 				<div className="logo-wraper">
-					<span>BURGER</span> HUB
+					<Link to="/">
+						{' '}
+						<span>BURGER</span> HUB
+					</Link>
 				</div>
 				<ul className="links-wraper">
 					<li>
@@ -53,7 +58,11 @@ const navLinks: React.FC<Props & LocalizeContextProps> = (props: Props & Localiz
 						<IconButton aria-label="person">
 							<Person2Icon />
 						</IconButton>
-						<div className="icon-menu">123</div>
+						<div className="icon-menu user-menu">
+							<Link to="/sign-page">Sign-in</Link>
+							<Link to="/register-page">Register</Link>
+							<Link to="/wish-page">Wishlist</Link>
+						</div>
 					</div>
 					<div className="icon-wraper">
 						<IconButton aria-label="person">
@@ -89,7 +98,12 @@ const navLinks: React.FC<Props & LocalizeContextProps> = (props: Props & Localiz
 								</Button>
 							</div>
 							<div>
-								<Button disabled className="btn-checkout" variant="contained">
+								<Button
+									disabled={cart.length === 0}
+									onClick={() => history.push('/checkout-page')}
+									className="btn-checkout"
+									variant="contained"
+								>
 									go to checkout
 								</Button>
 							</div>

@@ -3,11 +3,10 @@ import { AxiosResponse } from 'axios';
 import { call, put } from 'redux-saga/effects';
 import api from 'requests';
 import { BurgerActions } from 'actions/burger';
-import { GetInitProductsSagaAction, ResponseInitProducts } from 'actions/burger/interface';
+import { ResponseInitProducts } from 'actions/burger/interface';
 
-export function* getInitProductsSaga(action: GetInitProductsSagaAction) {
+export function* getInitProductsSaga() {
 	const response: AxiosResponse<ResponseInitProducts[]> = yield call(api.getInitProductsFunc);
-	console.log(response);
 	const newList = response.data.map((product) => {
 		const newProdoctObject = {
 			...product,

@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 import * as React from 'react';
 import { withLocalize, LocalizeContextProps } from 'react-localize-redux';
 import Rating from '@mui/material/Rating';

@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 /* eslint-disable array-callback-return */
 import * as React from 'react';
 import { withLocalize, LocalizeContextProps } from 'react-localize-redux';

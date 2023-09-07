@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import * as React from 'react';
 import { withLocalize, LocalizeContextProps } from 'react-localize-redux';
 import Container from '@mui/material/Container';
@@ -14,22 +15,6 @@ import visa from './visa.png';
 import './style.scss';
 
 export type Props = {};
-
-/*
-
-const countrys = {
-	"Israel": "Tel-Aviv",
-	"Germany": "Berlin",
-	"France": "Paris"
-};
-
-*/
-
-// const countrys = [
-// 	{ country: 'Israel', capital: 'Tel Aviv' },
-// 	{ country: 'Germany', capital: 'Berlin' },
-// 	{ country: 'France', capital: 'Paris' },
-// ];
 
 const footerSection: React.FC<Props & LocalizeContextProps> = (props: Props & LocalizeContextProps) => {
 	return (

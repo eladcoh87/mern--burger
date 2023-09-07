@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-curly-newline */
+/* eslint-disable implicit-arrow-linebreak */
 import * as React from 'react';
 import { LocalizeContextProps } from 'react-localize-redux';
 import { baseConnect } from '@base/features/base-redux-react-connect';
@@ -133,7 +135,8 @@ export class HeroSection extends React.Component<OwnProps> {
 						<FoodCard
 							key={product.id}
 							product={product}
-							addToCartProduct={(productFood, productName) => this.addToCartProductFunc(productFood, productName)
+							addToCartProduct={(productFood, productName) =>
+								this.addToCartProductFunc(productFood, productName)
 							}
 						/>
 					))}

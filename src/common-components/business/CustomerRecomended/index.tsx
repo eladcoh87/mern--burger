@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import * as React from 'react';
 import { withLocalize, LocalizeContextProps } from 'react-localize-redux';
 import Container from '@mui/material/Container';

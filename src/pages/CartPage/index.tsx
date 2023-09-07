@@ -87,7 +87,7 @@ export class CartPage extends React.Component<OwnProps> {
 						</div>
 						<hr className="line" />
 						<div className="subtotal-box">
-							<p className="subtotal-price">Subtotal: ${cartSubtotal}</p>
+							<p className="subtotal-price">Subtotal: ${cartSubtotal.toFixed(2)}</p>
 							<p>Taxes and shipping calculated at checkout</p>
 							<Button onClick={() => history.push('/checkout-page')} variant="outlined">
 								checkout

@@ -1,0 +1,29 @@
+.foodStripIcons-container {
+  background-color: #00a149;
+  padding: 35px 0px;
+}
+.foodStripIcons-container .foodStripIcons-wraper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 80px;
+  padding-left: 80px;
+}
+.foodStripIcons-container .foodStripIcons-wraper div:hover {
+  cursor: pointer;
+}
+.foodStripIcons-container .foodStripIcons-wraper .icon-wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.foodStripIcons-container .foodStripIcons-wraper .icon-wraper img {
+  height: 80px;
+}
+.foodStripIcons-container .foodStripIcons-wraper .icon-wraper p {
+  color: white;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}/*# sourceMappingURL=style.css.map */

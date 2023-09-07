@@ -21,7 +21,6 @@ export interface OwnProps extends Props, LocalizeContextProps {}
 
 export class HomePage extends React.Component<OwnProps> {
 	componentDidMount(): void {
-		console.log('didmount');
 		const { getInitProductsSaga } = this.props;
 		getInitProductsSaga();
 	}

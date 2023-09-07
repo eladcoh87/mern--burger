@@ -12,18 +12,28 @@ import FoodCard from 'common-components/business/FoodCard';
 import { BurgerActions, burgerSelector } from 'actions/burger';
 import { AddToCartProductFunction, BurgerProduct } from 'actions/burger/interface';
 import { Dispatch } from 'redux';
+import { withToast, ToasterManager } from '@base/features/base-decorator';
 // import { HeroSectionActions, heroSectionSelector } from 'actions/redux/heroSection';
 
 export type Props = {};
 
-export interface OwnProps extends Props, LocalizeContextProps {
+export interface OwnProps extends Props, ToasterManager, LocalizeContextProps {
 	initProducts: BurgerProduct[];
 	addToCartProduct: typeof AddToCartProductFunction;
 }
-
+@withToast
 export class HeroSection extends React.Component<OwnProps> {
+	addToCartProductFunc(productFood: BurgerProduct, productName: string) {
+		const { addToCartProduct, toastManager } = this.props;
+		addToCartProduct(productFood);
+		toastManager.add(`${productName} add to the wish list`, {
+			appearance: 'success',
+			autoDismiss: true,
+		});
+	}
+
 	render() {
-		const { initProducts, addToCartProduct } = this.props;
+		const { initProducts } = this.props;
 		return (
 			<div className="hero-section-container">
 				<div className="hero-image-wraper">
@@ -123,7 +133,8 @@ export class HeroSection extends React.Component<OwnProps> {
 						<FoodCard
 							key={product.id}
 							product={product}
-							addToCartProduct={(productFood: BurgerProduct) => addToCartProduct(productFood)}
+							addToCartProduct={(productFood, productName) => this.addToCartProductFunc(productFood, productName)
+							}
 						/>
 					))}
 				</Container>

@@ -17,14 +17,13 @@ import { Link } from 'react-router-dom';
 
 export type Props = {
 	cart: BurgerProduct[];
-	removeFromCartProduct: (productId: string) => void;
+	removeFromCartProduct: (productId: string, productName: string) => void;
 	totalCartProducts: number;
 	totalCartValue: number;
 };
 
 const navLinks: React.FC<Props & LocalizeContextProps> = (props: Props & LocalizeContextProps) => {
 	const { cart, removeFromCartProduct, totalCartProducts, totalCartValue } = props;
-	console.log(cart.length > 3);
 	return (
 		<nav className="nav-links-container">
 			<Container className="nav-links-wraper" maxWidth="xl">

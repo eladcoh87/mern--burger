@@ -1,0 +1,147 @@
+.nav-links-container {
+  background-color: rgb(0, 0, 0);
+  padding: 36px 0px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.nav-links-container .nav-links-wraper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links-container .nav-links-wraper .logo-wraper {
+  font-family: "Caprasimo", cursive;
+  font-size: 30px;
+  color: white;
+}
+.nav-links-container .nav-links-wraper .logo-wraper a {
+  color: white;
+  text-decoration: none;
+}
+.nav-links-container .nav-links-wraper .logo-wraper span {
+  color: green;
+}
+.nav-links-container .nav-links-wraper .links-wraper {
+  display: flex;
+  list-style-type: none;
+  color: white;
+  gap: 30px;
+}
+.nav-links-container .nav-links-wraper .links-wraper li {
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  font-size: 14px;
+}
+.nav-links-container .nav-links-wraper .links-wraper li:hover {
+  cursor: pointer;
+  color: #ffc222;
+}
+.nav-links-container .nav-links-wraper .contact-wraper {
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #1faa56;
+}
+.nav-links-container .nav-links-wraper .contact-wraper span {
+  color: white;
+}
+.nav-links-container .nav-links-wraper .contact-wraper .phone {
+  font-size: 26px;
+  color: #ffc222;
+  font-family: "Caprasimo", cursive;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper svg {
+  color: white;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .icon-wraper {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 3px;
+  position: relative;
+  transition: all 0.3s;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .icon-wraper .icon-menu {
+  display: none;
+  width: 300px;
+  background-color: white;
+  position: absolute;
+  transition: all 0.3s;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .icon-wraper .user-menu {
+  width: 130px;
+  padding: 20px;
+  right: 7px;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .icon-wraper .user-menu a {
+  color: rgba(0, 0, 0, 0.733);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+  font-size: 13.5px;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .icon-wraper .user-menu a:hover {
+  color: black;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .icon-wraper:hover {
+  transition: 0.3s;
+  background-color: #ffc222;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .icon-wraper .cart-menu {
+  padding: 10px;
+  text-align: center;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .icon-wraper .cart-menu .menu-cart-item-wraper {
+  min-height: 100px;
+  margin-bottom: 10px;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .icon-wraper .cart-menu .spend-price-wraper {
+  background-color: rgba(128, 128, 128, 0.705);
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .icon-wraper .cart-menu .spend-price-wraper p {
+  font-size: 15px;
+  color: white;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .icon-wraper .cart-menu .subtotal-wraper {
+  text-align: center;
+  padding: 20px 0px;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .icon-wraper .cart-menu .btn-cart {
+  width: 100%;
+  background-color: black;
+  margin-bottom: 12px;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .icon-wraper .cart-menu .btn-cart:hover {
+  background-color: #ffc222;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .icon-wraper .cart-menu .btn-checkout {
+  width: 100%;
+  background-color: #ffc222;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .icon-wraper:hover .icon-menu {
+  display: block;
+  z-index: 100;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .css-106c1u2-MuiBadge-badge {
+  background-color: #ffc222;
+  color: black;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .btn-ordernow {
+  background-color: #ffc222;
+  color: black;
+  font-family: "Caprasimo", cursive;
+  transition: 0.3s;
+  padding: 14px 20px;
+  border-radius: 13px;
+}
+.nav-links-container .nav-links-wraper .actions-btn-wraper .btn-ordernow:hover {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

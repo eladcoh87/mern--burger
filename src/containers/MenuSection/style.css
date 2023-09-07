@@ -1,0 +1,39 @@
+.menu-section-container .headline-wraper {
+  text-align: center;
+}
+.menu-section-container .headline-wraper h2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Caprasimo", cursive;
+  letter-spacing: 3px;
+}
+.menu-section-container .btns-wraper {
+  padding: 50px 0px;
+}
+.menu-section-container .btns-wraper .btns-center {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.menu-section-container .btns-wraper .btns-center .food-btn {
+  padding: 15px 25px;
+  width: 150px;
+  border-radius: 20px;
+  color: black;
+  border-color: rgba(128, 128, 128, 0.267);
+}
+.menu-section-container .btns-wraper .btns-center .food-btn:hover {
+  background-color: #ffc222;
+}
+.menu-section-container .btns-wraper .btns-center .btn-change-color {
+  background-color: #ffc222;
+}
+.menu-section-container .menu-cards-conatiner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,30 @@
+.menu-cart-item-box {
+  display: flex;
+  color: black;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.menu-cart-item-box img {
+  height: 70px;
+  width: 70px;
+}
+.menu-cart-item-box .name-para {
+  width: 100px;
+  text-align: left;
+  font-size: 15px;
+}
+.menu-cart-item-box .info-box {
+  display: flex;
+  align-items: center;
+}
+.menu-cart-item-box .info-box .price-para {
+  width: 160px;
+  text-align: left;
+  color: rgba(21, 143, 21, 0.664);
+  font-size: 14px;
+}
+.menu-cart-item-box .info-box .MuiSvgIcon-root path {
+  color: black;
+}/*# sourceMappingURL=style.css.map */

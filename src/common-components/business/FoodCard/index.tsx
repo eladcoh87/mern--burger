@@ -6,13 +6,12 @@ import { CardActionArea, CardActions } from '@mui/material';
 import Rating from '@mui/material/Rating';
 import IconButton from '@mui/material/IconButton';
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
-
 import './style.scss';
 import { BurgerProduct } from 'actions/burger/interface';
 
 export type Props = {
 	product: BurgerProduct;
-	addToCartProduct: (productFood: BurgerProduct) => void;
+	addToCartProduct: (productFood: BurgerProduct, productName: string) => void;
 };
 
 const foodCard: React.FC<Props & LocalizeContextProps> = (props: Props & LocalizeContextProps) => {
@@ -34,7 +33,7 @@ const foodCard: React.FC<Props & LocalizeContextProps> = (props: Props & Localiz
 				<div className="price-wraper">
 					<p>{price}</p>
 					<div>
-						<IconButton onClick={() => addToCartProduct(product)}>
+						<IconButton onClick={() => addToCartProduct(product, name)}>
 							<ShoppingBasketOutlinedIcon />
 						</IconButton>
 					</div>

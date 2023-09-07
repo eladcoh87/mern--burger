@@ -9,7 +9,7 @@ import { BurgerProduct } from 'actions/burger/interface';
 
 export type Props = {
 	product: BurgerProduct;
-	removeFromCartProduct: (productId: string) => void;
+	removeFromCartProduct: (productId: string, productName: string) => void;
 };
 
 const menuCartItem: React.FC<Props & LocalizeContextProps> = (props: Props & LocalizeContextProps) => {
@@ -21,7 +21,7 @@ const menuCartItem: React.FC<Props & LocalizeContextProps> = (props: Props & Loc
 				<p className="name-para">{product.name}</p>
 				<div className="info-box">
 					<p className="price-para"> {product.price}$</p>
-					<IconButton onClick={() => removeFromCartProduct(product.id)} aria-label="delete">
+					<IconButton onClick={() => removeFromCartProduct(product.id, product.name)} aria-label="delete">
 						<DeleteIcon />
 					</IconButton>{' '}
 				</div>

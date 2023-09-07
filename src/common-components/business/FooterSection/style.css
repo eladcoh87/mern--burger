@@ -1,0 +1,104 @@
+.footer-section-container {
+  background-color: #181818;
+}
+.footer-section-container .logo-box {
+  padding-top: 120px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-section-container .logo-box p {
+  color: #00a149;
+  font-family: "Caprasimo", cursive;
+  font-size: 56px;
+  padding: 0px 30px;
+}
+.footer-section-container .hr-line {
+  border-top: 1px solid rgba(128, 128, 128, 0.466);
+  margin: 0;
+  flex-grow: 1;
+}
+.footer-section-container .info-box {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+.footer-section-container .info-box h3 {
+  font-family: "Caprasimo", cursive;
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+.footer-section-container .info-box p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.footer-section-container .info-box .phone {
+  font-family: "Caprasimo", cursive;
+  font-size: 20px;
+  color: #ffc222;
+}
+.footer-section-container .info-col .info-col-email-wraper {
+  display: flex;
+  align-items: center;
+}
+.footer-section-container .info-col .info-col-email-wraper .MuiFilledInput-input {
+  background-color: #1e1d23;
+}
+.footer-section-container .info-col .info-col-email-wraper .MuiInputLabel-root {
+  color: white;
+}
+.footer-section-container .info-col .info-col-email-wraper .MuiButton-root {
+  background-color: #ffc222;
+  color: #181818;
+}
+.footer-section-container .info-col .info-col-email-wraper .MuiButton-root:hover {
+  color: white;
+}
+.footer-section-container .visa-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 33px 250px;
+  background-color: #00a149;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.footer-section-container .visa-box p {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+}
+.footer-section-container .visa-box img {
+  height: 34px;
+}
+.footer-section-container .visa-box .sociel-centered {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer-section-container .visa-box .sociel-centered .MuiIconButton-root {
+  background-color: ghostwhite;
+  padding: 10px;
+  margin-right: 10px;
+}
+.footer-section-container .visa-box .sociel-centered .MuiIconButton-root:hover {
+  background-color: #ffc222;
+}
+.footer-section-container .citys-box {
+  padding: 50px;
+  background-color: aliceblue;
+}
+.footer-section-container .citys-box .pressedBtn {
+  background-color: blue;
+}
+.footer-section-container .citys-box .notmetchCity {
+  background-color: red;
+}
+.footer-section-container .citys-box .noPressed {
+  background-color: none;
+}/*# sourceMappingURL=style.css.map */

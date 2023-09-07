@@ -1,0 +1,54 @@
+.menu-card-container {
+  flex-basis: 45%;
+  border: 1px solid gainsboro;
+  padding: 10px;
+  border-radius: 20px;
+}
+.menu-card-container .menu-card-wraper {
+  border-radius: 20px;
+  display: flex;
+  gap: 10px;
+  padding: 30px 10px;
+  background-color: #fff9e8;
+}
+.menu-card-container .menu-card-wraper .menu-card-img-wraper img {
+  height: 120px;
+}
+.menu-card-container .menu-card-wraper .menu-card-desc-wraper {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.menu-card-container .menu-card-wraper .menu-card-desc-wraper h3 {
+  font-size: 18px;
+  font-family: "Caprasimo", cursive;
+}
+.menu-card-container .menu-card-wraper .menu-card-desc-wraper h3:hover {
+  color: #ffc222;
+}
+.menu-card-container .menu-card-wraper .menu-card-desc-wraper p {
+  color: gray;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+}
+.menu-card-container .menu-card-wraper .menu-card-desc-wraper .menu-card-price-wraper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-card-container .menu-card-wraper .menu-card-desc-wraper .menu-card-price-wraper p {
+  color: #ffc222;
+  font-size: 20px;
+  font-family: "Miniver", cursive;
+}
+.menu-card-container .menu-card-wraper .menu-card-desc-wraper .menu-card-price-wraper .MuiIconButton-root {
+  background-color: #ffc222;
+  color: black;
+  transition: all 0.5s;
+}
+.menu-card-container .menu-card-wraper .menu-card-desc-wraper .menu-card-price-wraper .MuiIconButton-root:hover {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

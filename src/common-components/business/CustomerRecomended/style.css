@@ -48,4 +48,15 @@
 .recomended-container .recomended-wraper .recomended-last-row {
   font-family: Arial, Helvetica, sans-serif;
   color: rgba(128, 128, 128, 0.849);
+}
+
+@media (max-width: 800px) {
+  .recomended-container .recomended-section {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .recomended-container .recomended-section .recomended-wraper {
+    width: 100%;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=style.css.map */

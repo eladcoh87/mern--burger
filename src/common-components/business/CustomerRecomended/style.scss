@@ -53,3 +53,20 @@
 		}
 	}
 }
+
+@media (max-width: 800px) {
+	.recomended-container { 
+		.recomended-section {
+			flex-direction: column;
+			justify-content: center;
+			
+			.recomended-wraper {
+				
+				width: 100%;
+				margin: 0 auto;
+				
+			}
+		}
+
+	}
+}

@@ -101,4 +101,24 @@
 }
 .footer-section-container .citys-box .noPressed {
   background-color: none;
+}
+
+@media (max-width: 1000px) {
+  .footer-section-container .visa-box {
+    flex-direction: column;
+    padding: 50px;
+    gap: 20px;
+  }
+  .footer-section-container .visa-box .sociel-centered {
+    display: flex;
+  }
+  .footer-section-container .info-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .footer-section-container .info-box .info-col {
+    width: 280px;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */

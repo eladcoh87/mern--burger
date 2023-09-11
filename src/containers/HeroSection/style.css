@@ -194,4 +194,22 @@
   .hero-section-container .last-hero-image-wraper .top-left-div-image-main-section {
     left: 20%;
   }
+}
+@media (max-width: 720px) {
+  .pupularFood-container.MuiContainer-root {
+    justify-content: center;
+  }
+  .info-box-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 700px) {
+  .info-box-container {
+    margin-top: 200% !important;
+  }
+}
+@media (max-width: 540px) {
+  .info-box-container {
+    margin-top: 200% !important;
+  }
 }/*# sourceMappingURL=style.css.map */
